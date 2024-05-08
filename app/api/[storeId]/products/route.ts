@@ -112,7 +112,7 @@ export async function GET(
     const colorId = searchParams.get("colorId") || undefined;
     const lookId = searchParams.get("lookId") || undefined;
     const sizeId = searchParams.get("sizeId") || undefined;
-    const isFeatured = searchParams.get("sizeId");
+    const isFeatured = searchParams.get("isFeatured") || undefined;
 
     if (!params.storeId) {
       return new NextResponse("Store id is required", { status: 400 });
